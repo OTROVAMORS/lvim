@@ -69,6 +69,17 @@ lvim.plugins = {
 
 
   {
+    "rmagatti/goto-preview",
+    config = function()
+      require('goto-preview').setup {
+        width = 120,
+        height = 25,
+        default_mappings = false,
+        debug = false,
+        opacity = 50,
+        post_open_hook = nil }
+    end
+  },
 
   {
     cmd = "TroubleToggle",
