@@ -108,6 +108,11 @@ lvim.plugins = {
   },
 
   {
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup()
+    end,
+  },
 
   {
         -- All these keys will be mapped to their corresponding default scrolling animation
