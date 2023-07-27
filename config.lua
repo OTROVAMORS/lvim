@@ -33,6 +33,13 @@ lvim.plugins = {
       { 'hrsh7th/cmp-nvim-lsp' }, -- Required
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
+  },
+
+  {
+    "turbio/bracey.vim",
+    cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+    build = "npm install --prefix server",
+  },
 
   {
 
