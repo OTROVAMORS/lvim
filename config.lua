@@ -5,11 +5,6 @@ lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
   {
-  "tzachar/cmp-tabnine",
-  build = "./install.sh",
-  dependencies = "hrsh7th/nvim-cmp",
-  event = "InsertEnter",
-},
 
   {
     }
