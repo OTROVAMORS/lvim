@@ -6,6 +6,8 @@ vim.opt.guicursor = ""
 lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
+  { 'nvim-lua/plenary.nvim' },
+  { 'BurntSushi/ripgrep' },
   {
 
   {
