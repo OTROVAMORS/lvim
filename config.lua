@@ -3,6 +3,7 @@ vim.opt.relativenumber = true
 lvim.format_on_save.enabled = true
 vim.opt.guicursor = ""
 
+
 lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
@@ -14,6 +15,9 @@ lvim.plugins = {
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
+  {
+    "mrjones2014/nvim-ts-rainbow",
+  },
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
