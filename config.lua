@@ -1,6 +1,8 @@
 lvim.transparent_window = true
 vim.opt.relativenumber = true
+lvim.format_on_save.enabled = true
 vim.opt.guicursor = ""
+
 lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
