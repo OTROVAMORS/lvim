@@ -95,7 +95,17 @@ lvim.plugins = {
     config = function() require "lsp_signature".on_attach() end,
   },
 
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+
+  {
+    "folke/trouble.nvim",
     cmd = "TroubleToggle",
+  },
 
   {
 
