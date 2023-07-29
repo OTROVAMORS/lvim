@@ -131,12 +131,12 @@ lvim.plugins = {
     cmd = "TroubleToggle",
   },
 
-  {
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup()
-    end,
-  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   config = function()
+  --     require("auto-save").setup()
+  --   end,
+  -- },
 
   {
     "karb94/neoscroll.nvim",
