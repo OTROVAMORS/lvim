@@ -20,6 +20,13 @@ vim.cmd([[nnoremap <S-t> :lua require('harpoon.ui').nav_file(5)<CR>]])
 lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
+  -- harpoon config start
+  -- see file lvim/after/harpoon.lua
+  { 'ThePrimeagen/harpoon' },
+  -- harpoon config end
+
+
+
   { 'nvim-lua/plenary.nvim' },
   { 'BurntSushi/ripgrep' },
   {
