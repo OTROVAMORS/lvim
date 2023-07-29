@@ -4,6 +4,19 @@ lvim.format_on_save.enabled = true
 vim.opt.guicursor = ""
 
 
+
+
+
+
+-- Define the key mappings using vim.cmd to set them globally
+vim.cmd([[nnoremap <S-a> :lua require('harpoon.mark').add_file()<CR>]])
+vim.cmd([[nnoremap <S-b> :lua require('harpoon.ui').toggle_quick_menu()<CR>]])
+vim.cmd([[nnoremap <S-q> :lua require('harpoon.ui').nav_file(1)<CR>]])
+vim.cmd([[nnoremap <S-w> :lua require('harpoon.ui').nav_file(2)<CR>]])
+vim.cmd([[nnoremap <S-e> :lua require('harpoon.ui').nav_file(3)<CR>]])
+vim.cmd([[nnoremap <S-r> :lua require('harpoon.ui').nav_file(4)<CR>]])
+vim.cmd([[nnoremap <S-t> :lua require('harpoon.ui').nav_file(5)<CR>]])
+
 lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
