@@ -9,7 +9,7 @@ vim.opt.guicursor = ""
 
 
 -- Define the key mappings using vim.cmd to set them globally
-vim.cmd([[nnoremap <S-a> :lua require('harpoon.mark').add_file()<CR>]])
+vim.cmd([[nnoremap <S-s> :lua require('harpoon.mark').add_file()<CR>]])
 vim.cmd([[nnoremap <S-b> :lua require('harpoon.ui').toggle_quick_menu()<CR>]])
 vim.cmd([[nnoremap <S-q> :lua require('harpoon.ui').nav_file(1)<CR>]])
 vim.cmd([[nnoremap <S-w> :lua require('harpoon.ui').nav_file(2)<CR>]])
