@@ -18,15 +18,13 @@ vim.cmd([[nnoremap <S-r> :lua require('harpoon.ui').nav_file(4)<CR>]])
 vim.cmd([[nnoremap <S-t> :lua require('harpoon.ui').nav_file(5)<CR>]])
 
 lvim.plugins = {
-  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  -- themes start
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false },
+  { "ellisonleao/gruvbox.nvim",  name = "gruvbox", lazy = false, priority = 1000 },
+  -- themes end
 
   -- harpoon config start
-  -- see file lvim/after/harpoon.lua
   { 'ThePrimeagen/harpoon' },
-  -- harpoon config end
-
-
-
   { 'nvim-lua/plenary.nvim' },
   { 'BurntSushi/ripgrep' },
   {
@@ -34,10 +32,8 @@ lvim.plugins = {
     version = '0.1.2',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-
-  {
-    "mrjones2014/nvim-ts-rainbow",
-  },
+  -- harpoon config end
+  --
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -72,12 +68,12 @@ lvim.plugins = {
     end,
   },
 
-  -- {
-  --   "tzachar/cmp-tabnine",
-  --   build = "./install.sh",
-  --   dependencies = "hrsh7th/nvim-cmp",
-  --   event = "InsertEnter",
-  -- },
+  {
+    "tzachar/cmp-tabnine",
+    build = "./install.sh",
+    dependencies = "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+  },
 
   {
     "zbirenbaum/copilot-cmp",
@@ -89,20 +85,6 @@ lvim.plugins = {
         require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
       end, 100)
     end,
-  },
-
-
-  {
-    "rmagatti/goto-preview",
-    config = function()
-      require('goto-preview').setup {
-        width = 120,
-        height = 25,
-        default_mappings = false,
-        debug = false,
-        opacity = 50,
-        post_open_hook = nil }
-    end
   },
 
   {
@@ -138,41 +120,21 @@ lvim.plugins = {
   --   end,
   -- },
 
-  {
-    "karb94/neoscroll.nvim",
-    event = "WinScrolled",
-    config = function()
-      require('neoscroll').setup({
-        -- All these keys will be mapped to their corresponding default scrolling animation
-        mappings = { '<C-u>', '<C-d>', '<C-b>', '<C-f>',
-          '<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
-        hide_cursor = true,          -- Hide cursor while scrolling
-        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-        use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
-        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-        cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-        easing_function = nil,       -- Default easing function
-        pre_hook = nil,              -- Function to run before the scrolling animation starts
-        post_hook = nil,             -- Function to run after the scrolling animation ends
-      })
-    end
-  },
-
 
   {
     "m4xshen/smartcolumn.nvim",
     opts = {
-      colorcolumn = "80",
+      colorcolumn = "90",
       disabled_filetypes = { "help", "text", "markdown" },
       custom_colorcolumn = {},
       scope = "file",
     }
   },
 }
-lvim.colorscheme = "moonfly"
+lvim.colorscheme = "gruvbox"
 -- Set global options
 lvim.formatting = {
   wrap = true,
-  columns = 80,
+  columns = 85,
   linebreak = true
 }
